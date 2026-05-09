@@ -822,13 +822,14 @@ footer {
    ФОТО ДЛЯ ТИПОВ ПОДШИПНИКОВ
    Используем реальные фото с публичных CDN
    ========== */
+// SVG-иконки нарисованы вручную — всегда отображаются, не зависят от внешних серверов
 const typePhotos = {
-  'Шариковый':  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ballbearing.jpg/400px-Ballbearing.jpg',
-  'Роликовый':  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Verschiedene_Rollenlager.jpg/400px-Verschiedene_Rollenlager.jpg',
-  'Игольчатый': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Needle_roller_bearing.jpg/400px-Needle_roller_bearing.jpg',
-  'Упорный':    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Thrust_bearing_-_axial_load_-_animation.gif/400px-Thrust_bearing_-_axial_load_-_animation.gif',
-  'Сферический':'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Spherical_roller_bearing_din635.png/400px-Spherical_roller_bearing_din635.png',
-  'Специальный':'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ballbearing.jpg/400px-Ballbearing.jpg',
+  'Шариковый':   'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#1a1d24" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="65" fill="none" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="30" fill="#13151a" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="35" r="12" fill="#e8720c"/><circle cx="152" cy="65" r="12" fill="#e8720c"/><circle cx="152" cy="135" r="12" fill="#e8720c"/><circle cx="100" cy="165" r="12" fill="#e8720c"/><circle cx="48" cy="135" r="12" fill="#e8720c"/><circle cx="48" cy="65" r="12" fill="#e8720c"/><text x="100" y="106" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8299" font-weight="600">ШАРИКОВЫЙ</text></svg>`),
+  'Роликовый':   'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#1a1d24" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="63" fill="none" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="28" fill="#13151a" stroke="#2a2e3a" stroke-width="3"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(0 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(45 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(90 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(135 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(180 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(225 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(270 100 100)"/><rect x="88" y="22" width="10" height="22" rx="5" fill="#e8720c" transform="rotate(315 100 100)"/><text x="100" y="106" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8299" font-weight="600">РОЛИКОВЫЙ</text></svg>`),
+  'Игольчатый':  'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#1a1d24" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="63" fill="none" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="28" fill="#13151a" stroke="#2a2e3a" stroke-width="3"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(0 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(30 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(60 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(90 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(120 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(150 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(180 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(210 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(240 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(270 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(300 100 100)"/><rect x="96" y="24" width="5" height="25" rx="2.5" fill="#e8720c" transform="rotate(330 100 100)"/><text x="100" y="106" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a8299" font-weight="600">ИГОЛЬЧАТЫЙ</text></svg>`),
+  'Упорный':     'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect x="20" y="82" width="160" height="18" rx="4" fill="#1a1d24" stroke="#2a2e3a" stroke-width="3"/><rect x="20" y="100" width="160" height="18" rx="4" fill="#13151a" stroke="#2a2e3a" stroke-width="3"/><circle cx="43" cy="100" r="10" fill="#e8720c"/><circle cx="70" cy="100" r="10" fill="#e8720c"/><circle cx="97" cy="100" r="10" fill="#e8720c"/><circle cx="124" cy="100" r="10" fill="#e8720c"/><circle cx="151" cy="100" r="10" fill="#e8720c"/><rect x="30" y="65" width="140" height="10" rx="3" fill="#2a2e3a"/><rect x="30" y="125" width="140" height="10" rx="3" fill="#2a2e3a"/><text x="100" y="158" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#7a8299" font-weight="600">УПОРНЫЙ</text></svg>`),
+  'Сферический': 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#1a1d24" stroke="#2a2e3a" stroke-width="3"/><ellipse cx="100" cy="100" rx="63" ry="63" fill="none" stroke="#2a2e3a" stroke-width="3"/><ellipse cx="100" cy="100" rx="45" ry="30" fill="none" stroke="#2a2e3a" stroke-width="2" stroke-dasharray="5,3"/><circle cx="100" cy="100" r="25" fill="#13151a" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="37" r="11" fill="#e8720c"/><circle cx="148" cy="68" r="11" fill="#e8720c"/><circle cx="148" cy="132" r="11" fill="#e8720c"/><circle cx="100" cy="163" r="11" fill="#e8720c"/><circle cx="52" cy="132" r="11" fill="#e8720c"/><circle cx="52" cy="68" r="11" fill="#e8720c"/><text x="100" y="106" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a8299" font-weight="600">СФЕРИЧЕСКИЙ</text></svg>`),
+  'Специальный': 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="#1a1d24" stroke="#e8720c" stroke-width="3" stroke-dasharray="8,4"/><circle cx="100" cy="100" r="63" fill="none" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="100" r="28" fill="#13151a" stroke="#2a2e3a" stroke-width="3"/><circle cx="100" cy="37" r="11" fill="#e8720c"/><circle cx="148" cy="68" r="11" fill="#e8720c"/><circle cx="148" cy="132" r="11" fill="#e8720c"/><circle cx="100" cy="163" r="11" fill="#e8720c"/><circle cx="52" cy="132" r="11" fill="#e8720c"/><circle cx="52" cy="68" r="11" fill="#e8720c"/><text x="100" y="103" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a8299" font-weight="600">СПЕЦИАЛЬНЫЙ</text></svg>`),
 };
 
 /* ==========
@@ -1054,9 +1055,7 @@ function render() {
       <div class="card-img">
         <img
           src="${typePhotos[d.t]}"
-          alt="Подшипник ${d.a} ${d.b}"
-          loading="lazy"
-          onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ballbearing.jpg/400px-Ballbearing.jpg'"
+          alt="Подшипник ${d.a} ${d.b} — ${d.t}"
         >
         <span class="card-brand-dot dot-${d.b}">${d.b}</span>
       </div>
@@ -1088,12 +1087,48 @@ function closeModal() {
 }
 function outsideClose(e) { if (e.target === document.getElementById('modalBg')) closeModal(); }
 
-function submitForm() {
+async function submitForm() {
   const phone = document.getElementById('mPhone').value.trim();
-  if (!phone) { document.getElementById('mPhone').focus(); return; }
-  document.getElementById('formWrap').style.display = 'none';
-  document.getElementById('successMsg').style.display = 'block';
-  setTimeout(closeModal, 3000);
+  if (!phone) {
+    document.getElementById('mPhone').style.borderColor = 'var(--orange)';
+    document.getElementById('mPhone').focus();
+    return;
+  }
+
+  const btn = document.querySelector('.modal .btn-full');
+  btn.textContent = 'Отправляем...';
+  btn.disabled = true;
+
+  const formData = {
+    name:    document.getElementById('mName').value,
+    phone:   phone,
+    company: document.getElementById('mCompany').value,
+    article: document.getElementById('mArt').value,
+    comment: document.getElementById('mComment').value,
+    _subject: 'Новая заявка с сайта ВОЛГАПРОМГРУПП — ' + (document.getElementById('mArt').value || 'Запрос прайса'),
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/mqengeok', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      document.getElementById('formWrap').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+      // сбросить поля
+      ['mName','mPhone','mCompany','mArt','mComment'].forEach(id => document.getElementById(id).value = '');
+      setTimeout(closeModal, 4000);
+    } else {
+      btn.textContent = 'Ошибка — попробуйте ещё раз';
+      btn.disabled = false;
+    }
+  } catch(e) {
+    btn.textContent = 'Ошибка сети — попробуйте ещё раз';
+    btn.disabled = false;
+  }
 }
 
 // Инициализация
